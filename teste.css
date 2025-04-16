@@ -1,0 +1,105 @@
+/*Reset básico*/
+
+*{
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+/*Ajuda a deixar os elementos organizados dentro das caixas*/
+
+
+
+}
+
+/*Estilizando o Header */
+header {
+    background-color: black;
+    padding: 1rem; 
+    /* espaçamento interno */
+    box-shadow: 0 2px 4px black;
+/* sombra leve no header */
+position: sticky;
+/*vai colar ele no header*/
+top: 0;
+/*cola ele no topo*/
+/*zerando a formatação/distancia em relação ao topo*/
+left: 0;
+/* juntando com top fica no topo a esquerda*/
+/*zerando a formatação/distancia em relação a esquerda*/
+z-index: 999;
+/*precisa ser um valor maior que zero /
+/*Eixo Z utilizando para sobrepor outros elementos que estarão dentro do site*/
+
+}
+
+
+/*Container do header */
+.container-header {
+    display: flex; /*organiza os itens em linha */
+    justify-content: space-evenly; /*alinha verticalmente*/
+    align-items: center; /*alinha verticalmente*/
+    max-width: 1200px; /*limitando a largura maxima que a caixa do conteudo devera atingir*/
+    margin: 0 auto; /*centraliza na tela colocando margin 0 no top e bottom e as laterais automática*/
+    padding: 0 1rem; /*Respiro lateral*/
+
+
+
+
+}
+
+
+/* Estilizando a logo */
+.logo {
+    height: 40px;
+    /* altura fixa */
+    width: auto;
+    /* mantem proporção da imagem */
+
+
+}
+    
+/* botão do header */
+.btn-header {
+padding: 0.5rem 1rem; 
+/*primeiro em cima e embaixo segundo nas laterais*/
+background-color: purple;
+color: white;
+border: none;
+border-radius: 4px;
+font-size: 1rem;
+cursor: pointer;
+
+
+}
+
+  
+/*Resónsividade para telas menores */
+@media (max-width:600px) {
+.container-header {
+flex-direction: column; 
+/*empilha os itens podemos testar o row*/
+gap: 1rem;
+/*espaço entre logo e botão*/
+
+
+}
+
+.logo {
+height: 32px;
+/*diminui a logo em telas menores*/
+}
+
+
+.btn-header {
+width: 50%;
+/*botão ocupa largura total*/
+text-align: center;
+
+
+}
+}
+
+
+
+
+
